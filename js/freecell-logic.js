@@ -225,7 +225,7 @@ function handleCascDrop(event, ui, drop) {
 		thisCard.find('span').css('visibility','visible'); // IMPORTANT: the cool cards we use have spans that must be set on their own
 		// D: Reset z-index to something reasonable and stack it
 		thisCard.css('z-index', $(drop).find('.card').length);
-		thisCard.css({ 'position':'absolute', 'top':(($(drop).children().length-1) * getCardOffset())+'px', 'left':0 });
+		thisCard.css({ 'position':'absolute', 'top':(($(drop).children().length-1) * getCardOffset())+'px' });
 	});
 }
 
@@ -402,7 +402,7 @@ function doGameNew() {
 	$.each(cards, function(i, card){
 		var casc = $($('#cardCasc .cascade')[cascCell]);
 		var cardPos = (casc.children().length * getCardOffset())+'px';
-		card.css({ 'position':'absolute', 'top':cardPos, 'left':0 });
+		card.css({ 'position':'absolute', 'top':cardPos });
 		card.css({ 'z-index': casc.children().length });
 		casc.append(card);
 		cascCell = cascCell == 7 ? 0 : cascCell+1;
