@@ -143,9 +143,6 @@ footer {
 }
 
 .card {
-    position: absolute;
-    top: 0;
-    left: 0;
     cursor: pointer;
     background-color: var(--card-bg);
     border-radius: 5px;
